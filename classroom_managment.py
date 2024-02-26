@@ -33,40 +33,48 @@ classroom = [
     },
 ]
 
+def look_for_student(name):
+    for i,item in enumerate(classroom):
+        if item['name']==name:
+            return i
+
 
 def add_student(name, email=None):
-    """Add a new student to the classroom
-    with the following keys:
-    'name': the given name
-    'email': if email is given use it otherwise use <name>@example.com
-             in lowercase, you can use the `s.lower()` method
-    'grade': initialize with empty list
-    """
-    pass
+    classroom.append(student:={'name':name,'email':email if email else f"{name.lower()}@gmail.com",'grades':[]})
 
 
 def delete_student(name):
-    """Delete a student from the classroom"""
-    pass
+    del classroom[look_for_student(name)]
 
 
 def set_email(name, email):
-    """Sets the email of the student"""
-    pass
+    classroom[look_for_student(name)]['email']=email
+
 
 
 def add_grade(name, profession, grade):
-    """Adds a new grade to the student grades"""
-    pass
+    classroom[look_for_student(name)]['grades'].append((profession,grade))
+
+
 
 
 def avg_grade(name, profession):
-    """Returns the average of grades of the student
-    in the specified profession
-    """
-    pass
+    grades=classroom[look_for_student(name)]['grades']
+    sum,count=0,0
+    for item in grades:
+        if(item[0]==profession):
+            sum+=item[1]
+            count+=1
+    return sum/count
+
+
+
 
 
 def get_professions(name):
-    """Returns a list of unique professions that student has grades in"""
-    pass
+    grades=classroom[look_for_student(name)]['grades']
+    prof=set()
+    for item in grades:
+        prof.add(item[0])
+
+    return list(prof)
