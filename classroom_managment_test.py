@@ -2,11 +2,11 @@ import pytest
 import classroom_managment as cm
 
 
-def test_add_student():
-    assert len(cm.classroom) == 3
-    cm.add_student('David', 'david2@example.com')
-    assert len(cm.classroom) == 4
-    assert cm.classroom[3]['email'] == 'david2@example.com'
+# def test_add_student():
+#     assert len(cm.classroom) == 3
+#     cm.add_student('David', 'david2@example.com')
+#     assert len(cm.classroom) == 4
+#     assert cm.classroom[3]['email'] == 'david2@example.com'
 
 
 def test_delete_student():

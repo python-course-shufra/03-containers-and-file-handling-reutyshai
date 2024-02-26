@@ -39,12 +39,12 @@ def look_for_student(name):
             return i
 
 
-def add_student(name, email=None):
-    if email!=None:
-        mail=email
-    else: 
-        mail=f"{name.lower()}@gmail.com"
-    classroom.append(student:={'name':name,'email':mail,'grades':[]})
+# def add_student(name, email=None):
+#     if email==None:
+#         mail=f"{name.lower()}@gmail.com"
+#     else: 
+#         mail=email
+#     classroom.append(student:={'name':name,'email':mail,'grades':[]})
 
 
 def delete_student(name):
