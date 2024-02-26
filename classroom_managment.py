@@ -40,7 +40,7 @@ def look_for_student(name):
 
 
 def add_student(name, email=None):
-    classroom.append(student:={'name':name,'email':email if email else f"{name.lower()}@gmail.com",'grades':[]})
+    classroom.append(student:={'name':name,'email':email if email else f"{name.lower()}@example.com",'grades':[]})
 
 
 def delete_student(name):
