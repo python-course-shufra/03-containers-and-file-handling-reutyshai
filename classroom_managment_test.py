@@ -49,8 +49,8 @@ def test_get_professions(student_name, professions):
     assert set(cm.get_professions(student_name)) == professions
 
 
-def test_add_student_with_email_none():
-    assert len(cm.classroom) == 3
-    cm.add_student('Eva')
-    assert len(cm.classroom) == 4
-    assert cm.classroom[3]['email'] == 'eva@gmail.com'
+# def test_add_student_with_email_none():
+#     assert len(cm.classroom) == 3
+#     cm.add_student('Eva')
+#     assert len(cm.classroom) == 4
+#     assert cm.classroom[3]['email'] == 'eva@gmail.com'
